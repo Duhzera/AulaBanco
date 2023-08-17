@@ -90,5 +90,21 @@ values
 (10,'Sr','Marcos','Augusto','Avenida Australia','s/n',null,'06852 100','Itapecerica da Serra','SP','3623 8821','8891 2333',1),
 (11, 'Sr','David','Silva','Rua Arcy Prestes Ruggeri','24','Esquina do Mercado','18201 720','Itapetininga','SP','4565 9240','7765 4029',1);
 
+insert into tb_cliente
+values
+(12,'Sr','Ricardo','Cunha','Rua Jose Fortunato de Godoy','889',null,'13976 121','Itapira','SP','5467 1959','9244 9584',1),
+(13,'Sra','Laura','Batista','Rua Vila Lobos','76',null,'13976 018','Ribeirão Preto','SP','2111 8710','9991 2324',1),
+(14,'Sr','Valmir','Feliciano','Rua Professor Emilton Amaral','961','Loteamento Novo Horizonte','58053 223','João Pessoa','PB','4431 8740','9766 0033',1),
+(15, 'Sr','Agnaldo','Aparecido','Rua Soldado Celio Tonelli','778',NULL,'09240 320','Santo André','SP','2386 8092','99625 3683',1);
+
+insert into tb_item(id_item,ds_item,preco_custo,preco_venda,fg_ativo)
+
+values
+(1,'Quebra-cabeça de Madeira',15.23,21.95,1),
+(2,'Cubo X',7.45,11.49,1),
+(3,'CD Linux',1.99,2.49,1),
+(4,'Tecidos', 2.11,3.99,1),
+(5,'Moldura',7.54,9.95,1),
+(6,'Ventilador Pequeno',9.23,15.75,1);
 
 //select * from tb_cliente 
