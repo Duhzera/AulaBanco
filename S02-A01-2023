@@ -97,8 +97,8 @@ values
 (14,'Sr','Valmir','Feliciano','Rua Professor Emilton Amaral','961','Loteamento Novo Horizonte','58053 223','João Pessoa','PB','4431 8740','9766 0033',1),
 (15, 'Sr','Agnaldo','Aparecido','Rua Soldado Celio Tonelli','778',NULL,'09240 320','Santo André','SP','2386 8092','99625 3683',1);
 
-insert into tb_item(id_item,ds_item,preco_custo,preco_venda,fg_ativo)
 
+insert into tb_item(id_item,ds_item,preco_custo,preco_venda,fg_ativo)
 values
 (1,'Quebra-cabeça de Madeira',15.23,21.95,1),
 (2,'Cubo X',7.45,11.49,1),
@@ -107,4 +107,82 @@ values
 (5,'Moldura',7.54,9.95,1),
 (6,'Ventilador Pequeno',9.23,15.75,1);
 
-//select * from tb_cliente 
+select * from tb_item 
+
+insert into tb_pedido(id_pedido,id_cliente,dt_compra,dt_entrega,valor,fg_ativo)
+
+values
+(1,3,'13-03-2013','17-03-2013',2.99,1),
+(2,8,'26-06-2013','24-06-2013',0.00,1),
+(3,15,'02-09-2013','12-09-2013',3.99,1),
+(4,13,'03-09-2013','10-09-2013',2.99,1),
+(5,8,'21-07-2013','24-07-2013',0.00,1)ç
+
+insert into tb_item(id_item, ds_item, preco_custo, preco_venda, fg_ativo)
+values
+(7, 'Ventilador Grande', 13.36, 19.95, 1),
+(8, 'Escova de Dentes', 0.75, 1.45, 1),
+(9, 'Papel A4', 2.34, 2.45, 1),
+(10, 'Saco de Transporte', 0.01, 0.0, 1),
+(11, 'Alto-Falantes', 19.73, 25.32, 1);
+
+select * from tb_item_pedido
+
+
+INSERT INTO tb_item_pedido(id_pedido,id_item,quantidade)
+VALUES
+(1,4,1),
+(1,7,1),
+(1,9,1),
+(2,1,1),
+(2,10,1),
+(2,7,2);
+
+
+INSERT INTO tb_item_pedido(id_pedido,id_item,quantidade)
+VALUES
+(2,4,2),
+(3,2,1),
+(3,1,1),
+(4,5,2),
+(5,1,1),
+(5,3,1);
+
+INSERT INTO tb_codigo_barras(codigo_barras,id_item)
+VALUES
+(624152783,1),
+(624157463,2),
+(626453783,3),
+(624152774,3),
+(746574384,4),
+(345345867,5),
+(643456456,6);
+
+
+INSERT INTO tb_codigo_barras(codigo_barras,id_item)
+VALUES
+(847673683,7),
+(624123458,8),
+(947362553,8),
+(947362746,8),
+(458726364,9),
+(987987983,11),
+(223987237,11);
+
+INSERT INTO tb_estoque (id_item,quantidade)
+VALUES
+(1,12),
+(2,2),
+(4,8),
+(5,3),
+(7,8),
+(8,18),
+(10,1);
+
+SELECT inet_server_port(); --THIS SHOW THE PORT ON WHICH SERVER IS LISTENING
+
+SELECT current_database(); -- SHOWS DE CURRENT DATABASE
+
+SELECT current_user; --THIS SHOWS THE CURRENT USERID
+
+SELECT inet_server_addr(); --SHOWS THE IP ADDRES OF THE SERVER THAT ACCEPTED THE CONNECTION
