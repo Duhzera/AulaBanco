@@ -206,3 +206,5 @@ SELECT DISTINCT (sobrenome) FROM tb_cliente ORDER BY 1; --ELIMINA DUPLICIDADE (G
 SELECT ds_item,preco_custo FROM tb_item ORDER BY 1;
 
 SELECT ds_item,preco_custo, CAST((preco_custo*100)as INT) AS "PREÇO DE CUSTO" FROM tb_item ORDER BY 1;
+
+SELECT sobrenome AS "SOBRENOME DO CLIENTE", cidade as "CIDADE DO CLIENTE" FROM tb_cliente WHERE cidade = 'São Paulo';
