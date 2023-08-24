@@ -188,4 +188,21 @@ SELECT current_user; --THIS SHOWS THE CURRENT USERID
 SELECT inet_server_addr(); --SHOWS THE IP ADDRES OF THE SERVER THAT ACCEPTED THE CONNECTION
 
 
--- CONEXÃO VIA CMD psql -h localhost -p 5432 -d LBD -U postgres -W
+SELECT * FROM tb_item;
+
+SELECT cidade, sobrenome	FROM tb_cliente;
+
+SELECT cidade as "Cidade do Cliente",
+	sobrenome as "Sobrenome do Cliente"
+	FROM tb_cliente
+	ORDER BY 1 DESC, sobrenome ASC; -- PRIMEIRA COLUNA É QUE VAI SER LEVADO COMO LEI, A SEGUNDA SERVE PARA DESIMPATAR CASO HAJA EMPATE NA PRIMEIRA,
+	--POSSO USAR TANTO NUMERO(ORDEM DO SELECT) COMO USAR A COLUNA
+	
+SELECT sobrenome FROM tb_cliente ORDER BY 1;
+
+SELECT DISTINCT (sobrenome) FROM tb_cliente ORDER BY 1; --ELIMINA DUPLICIDADE (GERALMENTE QUANDO CRIA ALGO COM ALGUM ERRO NOS INNERS)
+
+
+SELECT ds_item,preco_custo FROM tb_item ORDER BY 1;
+
+SELECT ds_item,preco_custo, CAST((preco_custo*100)as INT) AS "PREÇO DE CUSTO" FROM tb_item ORDER BY 1;
