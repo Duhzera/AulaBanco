@@ -186,3 +186,6 @@ SELECT current_database(); -- SHOWS DE CURRENT DATABASE
 SELECT current_user; --THIS SHOWS THE CURRENT USERID
 
 SELECT inet_server_addr(); --SHOWS THE IP ADDRES OF THE SERVER THAT ACCEPTED THE CONNECTION
+
+
+-- CONEXÃO VIA CMD psql -h localhost -p 5432 -d LBD -U postgres -W
